@@ -19,6 +19,10 @@ After defeating all enemies:
 
 Complete all levels to win the game.
 
+## 🎮 Gameplay
+
+![BattleSnake gameplay](docs/media/battleSnake.gif)
+
 ## ✨ Features
 
 - Touch-friendly controls for Android
