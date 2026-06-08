@@ -6,6 +6,8 @@ This is a legacy personal game project originally created to practice game devel
 
 ## 🎮 Gameplay
 
+![BattleSnake gameplay](docs/battleSnake.gif)
+
 The player controls a continuously moving snake using an on-screen horizontal joystick.
 
 The objective is to eliminate every enemy in the level by shooting venom while avoiding direct contact with enemies and the arena borders.
@@ -18,10 +20,6 @@ After defeating all enemies:
 - The difficulty gradually increases.
 
 Complete all levels to win the game.
-
-## 🎮 Gameplay
-
-![BattleSnake gameplay](docs/media/battleSnake.gif)
 
 ## ✨ Features
 
