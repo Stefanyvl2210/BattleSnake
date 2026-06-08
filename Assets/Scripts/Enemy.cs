@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
-        culebrita = GameObject.Find("Snake").transform;
+        FindSnake();
     }
 
     // Start is called before the first frame update
@@ -23,9 +23,27 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rig.position = Vector2.MoveTowards(rig.position, culebrita.position, velocidad * Time.deltaTime);
+        if (culebrita == null)
+        {
+            FindSnake();
+        }
+
+        if (culebrita != null)
+        {
+            Vector2 nextPosition = Vector2.MoveTowards(rig.position, culebrita.position, velocidad * Time.fixedDeltaTime);
+            rig.MovePosition(nextPosition);
+        }
         //rig.position = Vector2.SmoothDamp(rig.position, culebrita.position, ref velocidadActual, velocidad);
+    }
+
+    private void FindSnake()
+    {
+        GameObject snake = GameObject.Find("Snake");
+        if (snake != null)
+        {
+            culebrita = snake.transform;
+        }
     }
 }

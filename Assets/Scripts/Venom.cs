@@ -24,7 +24,15 @@ public class Venom : MonoBehaviour
     {
         if(coll.tag == "enemy")
         {
+            coll.tag = "Untagged";
+            Motor motor = FindObjectOfType<Motor>();
+            if (motor != null)
+            {
+                motor.AddScore();
+            }
+
             Destroy(coll.gameObject);
+            Destroy(gameObject);
         }
     }
 }
